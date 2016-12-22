@@ -3,6 +3,7 @@
 #include "BattleTank.h"
 #include "TankAIController.h"
 
+
 void ATankAIController::BeginPlay()
 {
 	Super::BeginPlay();
@@ -15,6 +16,21 @@ void ATankAIController::BeginPlay()
 	{
 		UE_LOG(LogTemp, Warning, TEXT("PlayerTank found: %s"), *PlayerTank->GetName());
 	}
+}
+
+// Called every frame
+void ATankAIController::Tick(float DeltaTime)
+{
+	Super::Tick(DeltaTime);
+	if (GetPlayerTank())
+	{
+		// TODO Move towards player
+		GetControlledTank()->AimAt(GetPlayerTank()->GetActorLocation());
+
+		// Fire if ready
+	}
+
+
 }
 
 ATank* ATankAIController::GetControlledTank() const
