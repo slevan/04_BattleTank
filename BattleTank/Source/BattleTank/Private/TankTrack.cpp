@@ -4,7 +4,6 @@
 #include "TankTrack.h"
 
 
-
 void UTankTrack::SetThrottle(float Throttle)
 {
 	auto ForceApplied = GetForwardVector() * Throttle * TrackMaxDrivingForce;

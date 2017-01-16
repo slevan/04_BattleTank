@@ -2,7 +2,6 @@
 
 #include "BattleTank.h"
 #include "TankTrack.h"
-#include "Tank.h"
 #include "TankMovementComponent.h"
 
 void UTankMovementComponent::Initialize(UTankTrack* LeftTrackToSet, UTankTrack* RightTrackToSet)
