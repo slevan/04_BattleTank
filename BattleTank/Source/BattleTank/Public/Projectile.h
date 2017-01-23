@@ -25,4 +25,10 @@ public:
 private:
 	UProjectileMovementComponent* ProjectileMovement = nullptr;
 	
+	UPROPERTY(VisibleAnywhere, Category = "Componenents")
+	UStaticMeshComponent* CollisionMesh = nullptr;
+
+	UPROPERTY(VisibleAnywhere, Category = "Componenents")
+	UParticleSystemComponent* LaunchBlast = nullptr;
+
 };
