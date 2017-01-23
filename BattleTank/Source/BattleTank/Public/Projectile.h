@@ -33,4 +33,7 @@ private:
 
 	UPROPERTY(VisibleAnywhere, Category = "Componenents")
 	UParticleSystemComponent* ImpactBlast = nullptr;
+
+	UPROPERTY(VisibleAnywhere, Category = "Componenents")
+	URadialForceComponent* ExplosionForce = nullptr;
 };
