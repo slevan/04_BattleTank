@@ -2,8 +2,8 @@
 
 #include "BattleTank.h"
 #include "TankAimingComponent.h"
-#include "TankAIController.h"
 #include "Tank.h" // So we can implement OnDeath
+#include "TankAIController.h"
 
 
 void ATankAIController::BeginPlay()
@@ -26,8 +26,7 @@ void ATankAIController::SetPawn(APawn* InPawn)
 
 void ATankAIController::OnPossessedTankDeath()
 {
-	if (!ensure(GetPawn())) { return; }
-	GetPawn()->DetachFromControllerPendingDestroy();
+	UE_LOG(LogTemp, Warning, TEXT("Received!"))
 }
 
 // Called every frame
